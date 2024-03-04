@@ -32,7 +32,7 @@ jobs:
       run: |
         docker run --name nginx -d -p 80:80 ${{ env.REG }}/nginx:latest
         sleep 5
-        docker logs
+        docker logs nginx
         curl localhost:80
         docker rm -f nginx
     
