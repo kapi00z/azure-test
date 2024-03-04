@@ -31,6 +31,7 @@ jobs:
     - name: Test
       run: |
         docker run --name nginx -d -p 80:80 ${{ env.REG }}/nginx:latest
+        sleep 1
         curl localhost:80
         docker rm -f nginx
     
