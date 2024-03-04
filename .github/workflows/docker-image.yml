@@ -28,6 +28,6 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v5
       with:
-        context: nginx
+        file: nginx/Dockerfile
         push: true
-        tags: kapi00z/nginx:latest
+        tags: ${{ secrets.AZURE_REG }}/${{ secrets.AZURE_REG_LOGIN }}/nginx:latest
